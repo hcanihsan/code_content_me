@@ -1,4 +1,4 @@
-// -------------------------------------------------------- //
+// ---------------------------------------------------- //
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -34,6 +34,18 @@ class _MyAppFlutterLauncherPageState extends State<MyAppFlutterLauncherPage> {
     if (!await launch(_link)) throw 'URL tidak bisa diakses $_link';
   }
 
+  // _openWA() async {
+
+  //   String urlWA =
+  //       "https://wa.me/+628{Your WA Numbers}?text=Hallo, Saya Mau Pesan Produk Anda";
+  //   var encoded = Uri.encodeFull(urlWA);
+  //   if (await canLaunch(encoded)) {
+  //     await launch(encoded);
+  //   } else {
+  //     throw encoded.toString();
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,5 +63,4 @@ class _MyAppFlutterLauncherPageState extends State<MyAppFlutterLauncherPage> {
   }
 }
 
-// -------------------------------------------------------- //
-
+// ---------------------------------------------------- //
