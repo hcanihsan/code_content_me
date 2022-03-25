@@ -30,20 +30,25 @@ class MyAppStackPage extends StatelessWidget {
       body: Center(
         child: Container(
           decoration: BoxDecoration(
-              boxShadow: [
-                BoxShadow(
-                    color: Colors.grey.withOpacity(0.3),
-                    blurRadius: 10,
-                    offset: const Offset(0, 5))
-              ],
-              image: const DecorationImage(
-                  image: NetworkImage(
-                      'https://cdn.pixabay.com/photo/2015/06/01/05/58/shells-792912_1280.jpg'),
-                  fit: BoxFit.cover)),
+            color: Colors.grey[100],
+            boxShadow: [
+              BoxShadow(
+                  color: Colors.grey.withOpacity(0.3),
+                  blurRadius: 10,
+                  offset: const Offset(0, 5))
+            ],
+          ),
           width: 400,
           height: 400,
           child: Stack(
             children: [
+              Align(
+                alignment: Alignment.center,
+                child: Image.network(
+                  'https://cdn.pixabay.com/photo/2015/06/01/05/58/shells-792912_1280.jpg',
+                  fit: BoxFit.cover,
+                ),
+              ),
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
