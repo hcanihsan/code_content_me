@@ -94,14 +94,20 @@ class MyAppStackPage extends StatelessWidget {
                           ),
                         ),
                       ),
-                      Container(
-                        decoration: BoxDecoration(
-                            border: Border.all(color: Colors.grey)),
-                        child: const Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Text(
-                            'Read More',
-                            style: TextStyle(color: Colors.grey, fontSize: 17),
+                      GestureDetector(
+                        onTap: () {
+                          // Handle Tap In Here
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              border: Border.all(color: Colors.grey)),
+                          child: const Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Text(
+                              'Read More',
+                              style:
+                                  TextStyle(color: Colors.grey, fontSize: 17),
+                            ),
                           ),
                         ),
                       )
